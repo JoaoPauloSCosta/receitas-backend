@@ -1,0 +1,252 @@
+/* ==========================================================================
+   Seara Minha Receita — Design Tokens (v1.0.0)
+   Fonte de verdade: docs/DESIGN_SYSTEM.md (Secao 8.2)
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Lufga Light'), local('Lufga-Light');
+  /* Para ativar arquivos locais, adicione os .woff2 em /public/fonts/lufga/ e descomente:
+  src: url('/fonts/lufga/LufgaLight.woff2') format('woff2'), local('Lufga Light'), local('Lufga-Light');
+  */
+}
+
+@font-face {
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lufga Regular'), local('Lufga-Regular'), local('Lufga');
+  /* src: url('/fonts/lufga/LufgaRegular.woff2') format('woff2'), local('Lufga Regular'), local('Lufga-Regular'); */
+}
+
+@font-face {
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Lufga Medium'), local('Lufga-Medium');
+  /* src: url('/fonts/lufga/LufgaMedium.woff2') format('woff2'), local('Lufga Medium'), local('Lufga-Medium'); */
+}
+
+@font-face {
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Lufga SemiBold'), local('Lufga-SemiBold');
+  /* src: url('/fonts/lufga/LufgaSemiBold.woff2') format('woff2'), local('Lufga SemiBold'), local('Lufga-SemiBold'); */
+}
+
+@font-face {
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lufga Bold'), local('Lufga-Bold');
+  /* src: url('/fonts/lufga/LufgaBold.woff2') format('woff2'), local('Lufga Bold'), local('Lufga-Bold'); */
+}
+
+:root {
+  /* === MARCA SEARA & EDITORIAL MINHA RECEITA === */
+  --mr-brand-orange: #ff5300;
+  --mr-header-bg: #ff5b0d;
+  --mr-brand-orange-bright: #ff6720;
+  --mr-brand-orange-hover: #e55a1a;
+  --mr-brand-orange-deep: #fa4616;
+  --mr-brand-orange-aa: #c73e00;
+  --mr-terracotta: #ce5032;
+  --mr-terracotta-hover: #b03d1f;
+  --mr-terracotta-active: #963218;
+  --mr-amber-btn: #d97706;
+  --mr-amber-btn-hover: #b45309;
+  --mr-yellow-light: #fdda25;
+  --mr-yellow-dark: #ff8f1c;
+  --mr-gold-gourmet: #e0bb6e;
+
+  /* === SUPERFICIES & BORDAS === */
+  --mr-surface-default: #ffffff;
+  --mr-surface-cream: #faf5f3;
+  --mr-surface-subtle: #f9fafb;
+  --mr-surface-muted: #f3f4f6;
+  --mr-surface-dark-gourmet: #252525;
+  --mr-border-subtle: #f3f4f6;
+  --mr-border-default: #e5e7eb;
+  --mr-border-strong: #9ca3af;
+  --mr-border-warm: #faa96b;
+  --mr-scrollbar-thumb: #ffbfa1;
+  --mr-heart-outline-fill: #f6e4dc;
+
+  /* === TIPOGRAFIA & TEXTOS === */
+  --mr-font-sans: 'Lufga', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mr-text-strong: #000000;
+  --mr-text-primary: #1f1f1f;
+  --mr-text-heading-modal: #333333;
+  --mr-text-control: #374151;
+  --mr-text-dropdown: #3f3e3d;
+  --mr-text-drawer: #503c3c;
+  --mr-text-secondary: #666666;
+  --mr-text-muted: #6b7280;
+  --mr-text-inverse: #ffffff;
+  --mr-text-inverse-soft: rgba(255, 255, 255, 0.9);
+
+  /* === CATEGORIAS (CORES OBSERVADAS & VERSOES AA PARA TEXTO #FFFFFF) === */
+  --mr-cat-aves: #f35935;
+  --mr-cat-aves-aa: #c83e1d;
+  --mr-cat-peixes: #2c7aa8;
+  --mr-cat-peixes-aa: #2c7aa8;
+  --mr-cat-suina: #e72667;
+  --mr-cat-suina-aa: #b8144c;
+  --mr-cat-bovinos: #e82a2c;
+  --mr-cat-bovinos-aa: #c41c1e;
+  --mr-cat-cordeiro: #a70030;
+  --mr-cat-cordeiro-aa: #a70030;
+  --mr-cat-frios: #ce6933;
+  --mr-cat-frios-aa: #a84f1e;
+  --mr-cat-vegetal: #a0b340;
+  --mr-cat-vegetal-aa: #5c6e18;
+  --mr-cat-doces: #b352af;
+  --mr-cat-doces-aa: #8e378b;
+  --mr-cat-paes: #946932;
+  --mr-cat-paes-aa: #7d5726;
+
+  /* === SEMANTICA, VALIDACOES & TOASTS (WCAG AA) === */
+  --mr-success-bg: #edf9f1;
+  --mr-success-border: #2e8555;
+  --mr-success-text: #134e2e;
+  --mr-error-bg: #fef1f1;
+  --mr-error-border: #d92d20;
+  --mr-error-brand-red: #e12d2d;
+  --mr-error-text: #8a1f1b;
+  --mr-warning-bg: #fff8eb;
+  --mr-warning-border: #d97706;
+  --mr-warning-icon: #b45309;
+  --mr-warning-text: #78350f;
+  --mr-info-bg: #faf5f3;
+  --mr-info-border: #ce5032;
+  --mr-info-text: #3f3e3d;
+
+  /* === GRADIENTES & OVERLAYS === */
+  --mr-overlay-hero: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  --mr-overlay-card: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+  --mr-overlay-newsletter: linear-gradient(to top, rgba(190, 72, 16, 0.29), rgba(190, 72, 16, 0.29));
+  --mr-overlay-cta-warm: linear-gradient(rgba(80, 60, 60, 0), rgba(80, 60, 60, 0.6));
+  --mr-overlay-modal-backdrop: rgba(0, 0, 0, 0.5);
+  --mr-gradient-search-banner: radial-gradient(circle, rgb(254, 147, 0), rgb(241, 64, 0));
+  --mr-gradient-hero-progress: linear-gradient(90deg, #ff8f1c, #ce5032);
+
+  /* === SKELETONS === */
+  --mr-skeleton-base: #f3f4f6;
+  --mr-skeleton-highlight: #faf5f3;
+
+  /* === ESPACAMENTOS & CONTAINERS === */
+  --mr-space-1: 4px;
+  --mr-space-2: 8px;
+  --mr-space-3: 12px;
+  --mr-space-4: 16px;
+  --mr-space-5: 20px;
+  --mr-space-6: 24px;
+  --mr-space-7: 28px;
+  --mr-space-8: 32px;
+  --mr-space-12: 48px;
+  --mr-space-16: 64px;
+
+  --mr-container-header: 1478px;
+  --mr-container-wrap: 1440px;
+  --mr-container-wide: 1280px;
+  --mr-container-footer: 1200px;
+  --mr-container-hero: 1152px;
+  --mr-container-content: 1024px;
+  --mr-container-prose: 672px;
+  --mr-container-newsletter: 640px;
+  --mr-modal-sm: 400px;
+  --mr-modal-md: 575px;
+
+  /* === RAIOS & SOMBRAS === */
+  --mr-radius-none: 0px;
+  --mr-radius-2xs: 2px;
+  --mr-radius-xs: 4px;
+  --mr-radius-sm: 6px;
+  --mr-radius-md: 8px;
+  --mr-radius-lg: 12px;
+  --mr-radius-xl: 16px;
+  --mr-radius-2xl: 24px;
+  --mr-radius-3xl: 32px;
+  --mr-radius-full: 9999px;
+
+  --mr-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --mr-shadow-fav: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  --mr-shadow-nav: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  --mr-shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --mr-shadow-badge: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --mr-shadow-toast: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+  --mr-shadow-banner: 0 0 18px 0 rgba(0, 0, 0, 0.2);
+  --mr-shadow-modal: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+  --mr-shadow-ring-white: 0 0 0 3px #ffffff;
+
+  /* === CAMADAS Z-INDEX === */
+  --mr-z-base: 1;
+  --mr-z-overlay-content: 2;
+  --mr-z-card-control: 10;
+  --mr-z-hero-content: 20;
+  --mr-z-header: 30;
+  --mr-z-dropdown: 40;
+  --mr-z-search-overlay: 50;
+  --mr-z-drawer: 60;
+  --mr-z-floating: 100;
+  --mr-z-modal-backdrop: 1000;
+  --mr-z-modal: 1010;
+  --mr-z-toast: 10000;
+
+  /* === MOVIMENTO === */
+  --mr-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --mr-duration-fast: 150ms;
+  --mr-duration-normal: 200ms;
+  --mr-duration-slow: 300ms;
+  --mr-duration-hero-fade: 1000ms;
+  --mr-duration-shimmer: 1500ms;
+}
+
+/* === BASE LIMPA & FOCO ACESSIVEL === */
+:is(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--mr-terracotta-hover);
+  outline-offset: 2px;
+}
+
+.mr-surface-dark :is(a, button, input, select, textarea):focus-visible,
+.mr-header :is(a, button, input):focus-visible {
+  outline-color: var(--mr-text-inverse);
+}
+
+/* === SKELETON SHIMMER === */
+@keyframes mr-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.mr-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--mr-skeleton-base) 0%,
+    var(--mr-skeleton-highlight) 50%,
+    var(--mr-skeleton-base) 100%
+  );
+  background-size: 200% 100%;
+  animation: mr-shimmer var(--mr-duration-shimmer) infinite linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
